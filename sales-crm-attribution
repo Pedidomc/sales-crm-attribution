@@ -1,0 +1,35 @@
+# sales-crm-attribution
+
+Sistema de CRM com foco em atribuição de vendas, controle comercial e rastreamento de origem de pedidos.
+
+Este projeto foi criado para resolver um problema comum em operações comerciais:
+perda de leads, falta de rastreabilidade de vendas, erros de comissão e ausência de visão real do funil diário.
+
+---
+
+## 🎯 Objetivo do Produto
+
+- Centralizar pedidos e clientes
+- Identificar a origem real das vendas (anúncios, recompra, orgânico)
+- Atribuir corretamente vendas a representantes
+- Calcular comissões com regras claras
+- Separar pedido solicitado x pedido faturado
+- Servir como base para um SaaS comercial escalável
+
+---
+
+## 🧩 Principais Módulos
+
+- CRM de Clientes
+- Gestão de Pedidos
+- Atribuição de Vendas
+- Controle de Representantes
+- Comissões e Quebra de Caixa
+- Relatórios Gerenciais
+- Integração com Catálogo Digital
+- Agentes de IA para atendimento inicial
+
+---
+
+## 📁 Estrutura do Repositório
+
