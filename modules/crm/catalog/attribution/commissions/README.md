@@ -1,2 +1,2 @@
 # Comissões
-Regras de comissão por representante e quebra de caixa (1%).
+Regras de comissão por representante 5% e quebra de caixa (1%).
