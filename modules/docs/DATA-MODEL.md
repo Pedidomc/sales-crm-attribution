@@ -1,11 +1,13 @@
-# DATA MODEL — Sistema de Atribuição de Vendas
+# DATA MODEL – Sistema de Atribuição de Vendas
 
-Este documento define as entidades, campos e relacionamentos do sistema.
-Ele deve respeitar integralmente o CORE-LOGIC.
+Este documento define as entidades e campos do sistema.
+Ele deve obedecer integralmente o CORE-LOGIC.
 
 ---
 
 ## 1. Cliente
+
+Representa o comprador (CPF ou CNPJ).
 
 Campos:
 - id (único)
@@ -17,11 +19,13 @@ Campos:
 
 Regras:
 - Um cliente pode ter vários pedidos
-- A origem_principal nunca muda
+- A origem_principal nunca muda após o primeiro pedido
 
 ---
 
 ## 2. Pedido
+
+Representa uma oportunidade ou venda.
 
 Campos:
 - id
@@ -35,33 +39,42 @@ Campos:
 - data_criacao
 
 Regras:
-- Todo pedido nasce com origem
-- Origem nunca é sobrescrita
-- Status segue o funil definido no CORE
+- Todo pedido nasce com uma origem
+- A origem nunca é sobrescrita
+- O status deve seguir o funil definido no CORE-LOGIC
 
 ---
 
 ## 3. Representante
 
+Usuário responsável pelo atendimento ou fechamento.
+
 Campos:
 - id
 - nome
-- tipo (humano | automático)
+- tipo (humano | sistema)
 - ativo
+
+Regras:
+- Um representante pode ser humano ou automático
+- Representantes inativos não recebem novos pedidos
 
 ---
 
 ## 4. Atribuição
 
+Registro da origem e responsabilidade do pedido.
+
 Campos:
+- id
 - pedido_id
 - origem
 - campanha
 - canal
-- representante_id
-- timestamp
+- responsavel_id
+- data_atribuicao
 
 Regras:
 - A atribuição inicial é permanente
-- Novas interações apenas complementam
+- Novas interações apenas complementam o histórico
 
