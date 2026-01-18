@@ -1,2 +1,2 @@
 # Autenticação
-Login, permissões e níveis de acesso.
+Autenticação e Permissões
